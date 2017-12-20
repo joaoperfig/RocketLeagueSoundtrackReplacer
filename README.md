@@ -7,7 +7,7 @@ Python script to replace the soundtrack of Rocket League with a custom one
 - install ptython 3 or later
 - place the contents of this folder on rocketleague\TAGame\CookedPCConsole
 - convert your soundtrack to .wem (see Wwise: https://www.audiokinetic.com/download/)
-- place your soundtrack on rocketleague\TAGame\CookedPCConsole\_songs
+- place your soundtrack on rocketleague\TAGame\CookedPCConsole\ _songs
 - walk to rocketleague\TAGame\CookedPCConsole on a console shell
 - run "python _find_songs.py"
 - input "b" to backupt current songs, wait
