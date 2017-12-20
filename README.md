@@ -16,7 +16,7 @@ Python script to replace the soundtrack of Rocket League with a custom one
 - enjoy
 
 #### notes:
-- 42 song files will be replaces
+- 42 song files will be replaced
 - if your soundtrack has more files than this, some will be unused
 - if your soundtrack has less files than this, some will be repeated
 - the original songs have not been identified (I am lazy) and your songs will replace a random ingame song
