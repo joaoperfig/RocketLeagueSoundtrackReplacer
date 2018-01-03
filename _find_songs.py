@@ -64,10 +64,28 @@ def install():
 def cut_after(org, s):
     i = org.index(s)
     return org[i+len(s):]
+
+def replacelove():
+    songs = glob.glob("*.wem")
+    love = ""
+    print("Finding song...")
+    for song in songs:
+        if "345422383" in song:
+            love = song
+            print("Found: "+love)
+            break
+    import random
+    print ("Choosing replacement")
+    replacement = random.choice(songs)
+    while "345422383" in replacement:
+        replacement = random.choice(songs)
+    print("Replacement: "+replacement)
+    copyfile(replacement, love) 
+    print("Song replaced")
     
 while True:
     print("\n")
-    print("Welcome to the Rocket League sountrack replacer")
+    print("Welcome to the Rocket League soundtrack replacer")
     print("Made by Joao Figueira")
     print('Please place the contents of this folder on "rocketleague\TAGame\CookedPCConsole"')
     print('Place your .wem converted audio files on "rocketleague\TAGame\CookedPCConsole\_songs"')
@@ -76,6 +94,7 @@ while True:
     print('Also note that if you have less than 42 songs, some of your songs will be repeated')
     print("Make sure to backup songs first!")
     print('To backup current songs write "b", to restore old songs write "r", to install new songs on folder write "i"')
+    print('If you just hate that "I love you love you" song that allways plays at the start, write "x" to replace it with a random one')
     print('Write anything else to exit')
     if find_that_ends("Antenna_Fallout_VaultBoy_SF.upk") == ():
         print()
@@ -83,6 +102,8 @@ while True:
         print('Please place the contents of this folder on "rocketleague\TAGame\CookedPCConsole"')
         exit()
     inp = input(">")
+    while inp == "":
+        inp = input(">")
     if inp == "r":
         if find_that_ends("_old") == ():
             print("No backup saved! exiting")
@@ -94,6 +115,7 @@ while True:
         backup()
     elif inp == "i":
         install()
-    
+    elif inp in "x":
+        replacelove()
     else:
         break

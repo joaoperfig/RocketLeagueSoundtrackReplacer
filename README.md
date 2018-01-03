@@ -3,6 +3,11 @@
 ### about:
 Python script to replace the soundtrack of Rocket League with a custom one
 
+#### if you only  hate that "I love you love you" song
+- install ptython 3 or later
+- place the contents of this folder on rocketleague\TAGame\CookedPCConsole
+- input "x" to replace it, wait
+
 ### setup:
 - install ptython 3 or later
 - place the contents of this folder on rocketleague\TAGame\CookedPCConsole
